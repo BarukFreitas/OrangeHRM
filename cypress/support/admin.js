@@ -48,3 +48,23 @@ Cypress.Commands.add('typeConfirmPasswordForm', (password) =>{
 Cypress.Commands.add('clickSave', () =>{
     cy.get('button.oxd-button:nth-child(3)').click()
 });
+
+Cypress.Commands.add('typeUsernameSearch', (username) =>{
+    cy.get('input.oxd-input:nth-child(1)').type(username)
+});
+
+Cypress.Commands.add('clickSearch', () =>{
+    cy.get('button.oxd-button:nth-child(2)').click()
+});
+
+Cypress.Commands.add('clickDeleteUser', () =>{
+    cy.get('.bi-trash').click()
+});
+
+Cypress.Commands.add('clickConfirmDelete', () =>{
+    cy.get('.oxd-button--label-danger').click()
+});
+
+Cypress.Commands.add('readDeleteSuccess', () =>{
+    cy.get('.oxd-text--toast-message').should('be.visible')
+});

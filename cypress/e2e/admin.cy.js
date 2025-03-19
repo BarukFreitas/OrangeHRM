@@ -10,7 +10,7 @@ describe('Cadastro de novo empregado', () =>{
     it('Deve cadastrar novo empregado com sucesso', () => {
         cy.clickAdmin()
         cy.clickAddAdmin()
-        cy.wait(2000)
+        cy.wait(1000)
         cy.clickSelectRole()
         cy.clickSelectAdmin()
         cy.typeEmployeeName('jose da silva')
